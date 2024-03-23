@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F5A65DA-0A83-4397-B661-8013286B7A5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InventoryWIPDLL</RootNamespace>
+    <AssemblyName>InventoryWIPDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataEntryWIPDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEntryWIPDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSessionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeSessionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSessionByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSessionByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWIPByPartIDAndWarehouseIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWIPByPartIDAndWarehouseIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWIPByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWIPByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWIPBySessionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWIPBySessionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWIPByTransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWIPByTransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDataEntryWIPData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDataEntryWIPData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertNewSessionData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertNewSessionData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryWIPClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSessionData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveSessionData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSessionEntriesFromWIPData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveSessionEntriesFromWIPData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveWIPEntryData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveWIPEntryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWIPTransactionQuantityData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWIPTransactionQuantityData.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataEntryWIPDataSet1.xsc">
+      <DependentUpon>DataEntryWIPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataEntryWIPDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEntryWIPDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataEntryWIPDataSet1.xss">
+      <DependentUpon>DataEntryWIPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeSessionDataSet.xsc">
+      <DependentUpon>EmployeeSessionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeSessionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeSessionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmployeeSessionDataSet.xss">
+      <DependentUpon>EmployeeSessionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSessionByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindSessionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSessionByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSessionByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSessionByEmployeeIDDataSet.xss">
+      <DependentUpon>FindSessionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByPartIDAndWarehouseIDDataSet.xsc">
+      <DependentUpon>FindWIPByPartIDAndWarehouseIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByPartIDAndWarehouseIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWIPByPartIDAndWarehouseIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWIPByPartIDAndWarehouseIDDataSet.xss">
+      <DependentUpon>FindWIPByPartIDAndWarehouseIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByProjectIDDataSet.xsc">
+      <DependentUpon>FindWIPByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWIPByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWIPByProjectIDDataSet.xss">
+      <DependentUpon>FindWIPByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPBySessionIDDataSet.xsc">
+      <DependentUpon>FindWIPBySessionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPBySessionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWIPBySessionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWIPBySessionIDDataSet.xss">
+      <DependentUpon>FindWIPBySessionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByTransactionIDDataSet.xsc">
+      <DependentUpon>FindWIPByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWIPByTransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWIPByTransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWIPByTransactionIDDataSet.xss">
+      <DependentUpon>FindWIPByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDataEntryWIPData.xsc">
+      <DependentUpon>InsertDataEntryWIPData.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDataEntryWIPData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDataEntryWIPData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDataEntryWIPData.xss">
+      <DependentUpon>InsertDataEntryWIPData.xsd</DependentUpon>
+    </None>
+    <None Include="InsertNewSessionData.xsc">
+      <DependentUpon>InsertNewSessionData.xsd</DependentUpon>
+    </None>
+    <None Include="InsertNewSessionData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertNewSessionData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertNewSessionData.xss">
+      <DependentUpon>InsertNewSessionData.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RemoveSessionData.xsc">
+      <DependentUpon>RemoveSessionData.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveSessionData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveSessionData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveSessionData.xss">
+      <DependentUpon>RemoveSessionData.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveSessionEntriesFromWIPData.xsc">
+      <DependentUpon>RemoveSessionEntriesFromWIPData.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveSessionEntriesFromWIPData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveSessionEntriesFromWIPData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveSessionEntriesFromWIPData.xss">
+      <DependentUpon>RemoveSessionEntriesFromWIPData.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveWIPEntryData.xsc">
+      <DependentUpon>RemoveWIPEntryData.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveWIPEntryData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveWIPEntryData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveWIPEntryData.xss">
+      <DependentUpon>RemoveWIPEntryData.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWIPTransactionQuantityData.xsc">
+      <DependentUpon>UpdateWIPTransactionQuantityData.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWIPTransactionQuantityData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWIPTransactionQuantityData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWIPTransactionQuantityData.xss">
+      <DependentUpon>UpdateWIPTransactionQuantityData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
